@@ -1,7 +1,7 @@
 /*********
   Rui Santos
   Complete project details at https://randomnerdtutorials.com/esp8266-dht11dht22-temperature-and-humidity-web-server-with-arduino-ide/
-  10/31/2020 Updated by Marz details at: github.com/MDooley47/NodeMCU-DHT-Temperature-and-Humidty-Server
+  10/31/2020 Updated by Marz details at: github.com/marzvrover/NodeMCU-DHT-Temperature-and-Humidty-Server
 *********/
 
 // Import required libraries
