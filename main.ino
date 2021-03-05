@@ -77,10 +77,6 @@ const char index_html[] PROGMEM = R"rawliteral(
     <sup class="units">%</sup>
   </p>
   <p>
-      <script src="https://apps.elfsight.com/p/platform.js" defer></script>
-<div class="elfsight-app-65e091b0-d33c-4191-81f3-be77c921660a"></div>
-    </P>
-  <p>
     <i class="fab fa-youtube" style="font-size:1.0rem;color:red;"></i>
     <span style="font-size:1.0rem;">Subscribe to </span>
     <a href="https://www.youtube.com/channel/UC49xSqiQ6gBrxUMQ9zvzO6A" target="_blank" style="font-size:1.0rem;">The IoT Projects YouTube Channel</a>
