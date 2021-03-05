@@ -21,8 +21,8 @@ const char* password = "PASSWORD";
 
 // Uncomment the type of sensor in use:
 //#define DHTTYPE    DHT11     // DHT 11
-#define DHTTYPE    DHT22     // DHT 22 (AM2302)
 //#define DHTTYPE    DHT21     // DHT 21 (AM2301)
+#define DHTTYPE    DHT22     // DHT 22 (AM2302)
 
 DHT dht(DHTPIN, DHTTYPE);
 
@@ -38,7 +38,7 @@ AsyncWebServer server(80);
 unsigned long previousMillis = 0;    // will store last time DHT was updated
 
 // Updates DHT readings every 10 seconds
-const long interval = 10000;  
+const long interval = 10000;
 
 const char index_html[] PROGMEM = R"rawliteral(
 <!DOCTYPE HTML><html>
@@ -65,13 +65,13 @@ const char index_html[] PROGMEM = R"rawliteral(
 <body>
   <h2>ESP8266 DHT Server</h2>
   <p>
-    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i> 
-    <span class="dht-labels">Temperature</span> 
+    <i class="fas fa-thermometer-half" style="color:#059e8a;"></i>
+    <span class="dht-labels">Temperature</span>
     <span id="temperature">%TEMPERATURE%</span>
     <sup class="units">&#176;C</sup>
   </p>
   <p>
-    <i class="fas fa-tint" style="color:#00add6;"></i> 
+    <i class="fas fa-tint" style="color:#00add6;"></i>
     <span class="dht-labels">Humidity</span>
     <span id="humidity">%HUMIDITY%</span>
     <sup class="units">%</sup>
@@ -130,7 +130,7 @@ void setup(){
   // Serial port for debugging purposes
   Serial.begin(115200);
   dht.begin();
-  
+
   // Connect to Wi-Fi
   WiFi.begin(ssid, password);
   Serial.println("Connecting to WiFi");
@@ -159,8 +159,8 @@ void setup(){
   // Start server
   server.begin();
 }
- 
-void loop(){  
+
+void loop(){
   unsigned long currentMillis = millis();
   if (currentMillis - previousMillis >= interval) {
     // save the last time you updated the DHT values
@@ -179,7 +179,7 @@ void loop(){
     }
     // Read Humidity
     float newH = dht.readHumidity();
-    // if humidity read failed, don't change h value 
+    // if humidity read failed, don't change h value
     if (isnan(newH)) {
       Serial.println("Failed to read from DHT sensor!");
     }
