@@ -60,6 +60,15 @@ const char index_html[] PROGMEM = R"rawliteral(
       vertical-align:middle;
       padding-bottom: 15px;
     }
+    @media (prefers-color-scheme: dark) {
+      body {
+        color: #eee;
+        background: #121212;
+      }
+      body a {
+        color: #809fff;
+      }
+    }
   </style>
 </head>
 <body>
